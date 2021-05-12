@@ -1,5 +1,5 @@
 import { IsIn, IsNotEmpty, IsOptional } from "class-validator";
-import { TodoStatus } from "../todo.model";
+import { TodoStatus } from "../todo-status.enum";
 
 export class GetTodoFilterDto {
     

@@ -1,4 +1,4 @@
-import { Controller, Get,Post,Body, Param, Delete, Patch, Query } from '@nestjs/common';
+import { Controller, Get,Post,Body, Param, Delete, Patch, Query, UsePipes, ValidationPipe } from '@nestjs/common';
 import { TodosService } from './todos.service';
 import { Todo, TodoStatus } from './todo.model';
 import { CreateTodoDto } from './dto/create-todo.dto';
@@ -19,6 +19,7 @@ export class TodosController {
     
 
     @Post()
+    @UsePipes(ValidationPipe)
     createTodo(@Body() createTodoDto: CreateTodoDto) : Todo {
       return this.todosService.createTodos(createTodoDto)
     }

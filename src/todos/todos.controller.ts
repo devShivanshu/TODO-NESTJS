@@ -10,7 +10,7 @@ export class TodosController {
     constructor(private todosService: TodosService){ }
 
     @Get()
-    getTodos(@Query() filterDto: GetTodoFilterDto) : Todo[] {
+    getTodos(@Query(ValidationPipe) filterDto: GetTodoFilterDto) : Todo[] {
         if(Object.keys(filterDto).length){
           return this.todosService.getTodosWithFilter(filterDto)
         }

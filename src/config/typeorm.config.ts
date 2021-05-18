@@ -5,11 +5,11 @@ const dbConfig = config.get('db');
 
 export const typeOrmConfig : TypeOrmModuleOptions = {
    type : dbConfig.type,
-   host : process.env.HOST_NAME || dbConfig.host,
-   port : process.env.PORT_NAME || dbConfig.port,
-   username : process.env.USERNAME || dbConfig.username,
-   password : process.env.PASSWORD || dbConfig.password,
-   database : process.env.DATABASE || dbConfig.database,
+   host : "ec2-23-23-128-222.compute-1.amazonaws.com",
+   port : 5432,
+   username : "urvtjyxnjyslis",
+   password : "304588cb68571ceca2b4afabc5b8ed182f18d166089f1c53b8ffdc94263af685",
+   database : "d10m2rbia660po",
    synchronize : process.env.TYPE_ORM_SYNC || dbConfig.synchronise,
    autoLoadEntities : true
 

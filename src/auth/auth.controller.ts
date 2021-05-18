@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Req, UseGuards, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Get, Post, Req, UseGuards, ValidationPipe } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth.service';
 import { AuthCredentialsDto } from './dto/auth-credentialts.dto';
@@ -20,4 +20,8 @@ export class AuthController {
         return this.authService.signIn(authCredentialsDto);
     }
 
+    @Get('/test')
+    sample(): number {
+        return 4;
+    }
 }

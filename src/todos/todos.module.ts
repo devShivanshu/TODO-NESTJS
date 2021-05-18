@@ -13,6 +13,5 @@ import { TodosService } from './todos.service';
   ],
   controllers: [TodosController],
   providers: [TodosService],
-
 })
 export class TodosModule {}

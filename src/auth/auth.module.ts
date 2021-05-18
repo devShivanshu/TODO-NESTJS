@@ -13,7 +13,7 @@ import { JwtStrategy } from './jwt-strategy';
     JwtModule.register({
        secret: process.env.JWT_SECRET,
        signOptions: {
-          expiresIn : process.env.JET_EXPIRE
+          expiresIn : parseInt(process.env.JWT_EXPIRE)
        }
     }),
    TypeOrmModule.forFeature([UserRepository])

@@ -4,7 +4,7 @@ const { DATABASE_URL, DATABASE_PORT, DATABASE_USER, DATABASE_PASS, DATABASE_NAME
 
 export const typeOrmConfig : TypeOrmModuleOptions = {
    type : "postgres",
-   host : DATABASE_HOST,
+   url: DATABASE_URL,
    port : parseInt(DATABASE_PORT),
    username : DATABASE_USER,
    password : DATABASE_PASS,

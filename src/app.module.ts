@@ -6,10 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from 'config';
 
 @Module({
-  imports: [TodosModule, TypeOrmModule.forRoot(typeOrmConfig), AuthModule, ConfigModule.forRoot({
-    isGlobal: true,
-    envFilePath: '.env',
-  })],
+  imports: [TodosModule, TypeOrmModule.forRoot(typeOrmConfig), AuthModule],
 
 })
 export class AppModule {}

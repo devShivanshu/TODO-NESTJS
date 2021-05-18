@@ -14,7 +14,7 @@ import { JwtStrategy } from './jwt-strategy';
     JwtModule.register({
        secret: process.env.JWT_SECRET || "trvsSecretKey",
        signOptions: {
-          expiresIn : parseInt(process.env.JWT_EXPIRE)
+          expiresIn : process.env.JWT_EXPIRE
        }
     }),
    TypeOrmModule.forFeature([UserRepository])

@@ -22,5 +22,6 @@ export class Todo extends BaseEntity {
 
     @Column()   
     userId: number;
+    
 
 }

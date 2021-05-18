@@ -11,6 +11,6 @@ export const typeOrmConfig : TypeOrmModuleOptions = {
    database : DATABASE_NAME,
    synchronize : true,
    autoLoadEntities : true,
-   
+   host: DATABASE_HOST,
 
 }
